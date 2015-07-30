@@ -1,27 +1,29 @@
-<div id="task-{{ task.id }}">
+<div id="task-{{ task.id }}" class="tasks-padding" ng-mouseover="show = true" ng-mouseleave="show = false" ng-init="show = false">
     <div class="tasks-container col-lg-9" ng-class="{'task-finished-container' : task.finish}">
         <h4><a ng-href="">{{ task.name }}</a></h4>
-        <p>{{ task.content }}</p>
+        <p ng-show="show">{{ task.content }}</p>
 
-        <a class="align-right" ng-href="#/edit/{{task.id}}">
-            <button class="btn task-actions">
-                <i class="material-icons">mode_edit</i>
-                <span>Modifier</span>
-            </button>
-        </a>
-        <a class="align-right" ng-href="#/tasks" ng-click="delete(task.id)">
-            <button class="btn task-actions">
-                <i class="material-icons">delete</i>
-                <span>Supprimer</span>
-            </button>
-        </a>
-        <span>
-            <label for="task-finish-{{ task.id }}" class="btn task-actions">
-                <i class="material-icons" ng-if="!task.finish">check_box_outline_blank</i>
-                <i class="material-icons" ng-if="task.finish">check_box</i>
-                <span>Valider</span>
-            </label>
-            <input type="checkbox" id="task-finish-{{ task.id }}" aria-label="Checked" ng-model="task.finish" checked="task.finish" ng-change="isFinished(task, $index)">
+        <span ng-show="show">
+            <a class="align-right" ng-href="#/edit/{{task.id}}">
+                <button class="btn task-actions">
+                    <i class="material-icons">mode_edit</i>
+                    <span>Modifier</span>
+                </button>
+            </a>
+            <a class="align-right" ng-href="#/tasks" ng-click="delete(task.id)">
+                <button class="btn task-actions">
+                    <i class="material-icons">delete</i>
+                    <span>Supprimer</span>
+                </button>
+            </a>
+            <span>
+                <label for="task-finish-{{ task.id }}" class="btn task-actions">
+                    <i class="material-icons" ng-if="!task.finish">check_box_outline_blank</i>
+                    <i class="material-icons" ng-if="task.finish">check_box</i>
+                    <span>Valider</span>
+                </label>
+                <input type="checkbox" id="task-finish-{{ task.id }}" aria-label="Checked" ng-model="task.finish" checked="task.finish" ng-change="isFinished(task, $index)">
+            </span>
         </span>
     </div>
     <div class="col-lg-3">
