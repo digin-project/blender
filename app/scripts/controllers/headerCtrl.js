@@ -2,7 +2,8 @@
 
 app.controller("HeaderCtrl", function(API, $scope, $http, $location, $session, Session) {
 
-	$scope.undisplay = true;
+	$scope.undisplay = false;
+	$scope.display = true;
 
 	Session.isAuth().then(function(response) {
 		if(response.data) {
