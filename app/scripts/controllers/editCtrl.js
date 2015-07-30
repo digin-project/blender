@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("editCtrl", function(API, $scope, $http, $location, $session, Session, $routeParams) {
+app.controller("EditCtrl", function(API, $scope, $http, $location, $session, Session, $routeParams) {
 
 $scope.getTask = function($id) {
     $http.get(API.HOST + "/tasks/"+$routeParams.id)

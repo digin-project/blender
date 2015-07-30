@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("projectsCtrl", function(API, $scope, $routeParams, $http, Session, $session, $location) {
+app.controller("ProjectsCtrl", function(API, $scope, $routeParams, $http, Session, $session, $location) {
 
 	$scope.display = false;
 	$scope.id = $session.get("id") ? $session.get("id") : null;

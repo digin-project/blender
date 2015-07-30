@@ -6,20 +6,20 @@ var app = angular.module('app', [
 
 app.config(function ($routeProvider) {
     $routeProvider
-        .when('/', {templateUrl:'views/tasks/myTasks.html', controller:"tasksCtrl"})
+        .when('/', {templateUrl:'views/tasks/myTasks.html', controller:"TasksCtrl"})
     	.when('/submit', {templateUrl:'views/submit.html', controller:"PostUserCtrl"})
     	.when('/connect', {templateUrl:'views/connect.html', controller:"LoginCtrl"})
-    	.when('/profil', {templateUrl:'views/users/profil.html', controller:"profilCtrl"})
-    	.when('/tasks', {templateUrl:'views/tasks/tasks.html', controller:"tasksCtrl"})
-    	.when('/user/tasks', {templateUrl:'views/tasks/myTasks.html', controller:"tasksCtrl"})
-    	.when('/tasks/add', {templateUrl:'views/tasks/addTask.html', controller:"tasksCtrl"})
-    	.when('/project/:id', {templateUrl:'views/projects/project.html', controller:"projectsCtrl"})
-    	.when('/projects', {templateUrl:'views/projects/projects.html', controller:"projectsCtrl"})
-    	.when('/user/projects', {templateUrl:'views/projects/myProjects.html', controller:"projectsCtrl"})
-    	.when('/projects/add', {templateUrl:'views/projects/addProject.html', controller:"projectsCtrl"})
-        .when('/users', {templateUrl:'views/users/users.html', controller:"usersCtrl"})
-        .when('/users/add', {templateUrl:'views/users/addUser.html', controller:"usersCtrl"})
-    	.when('/edit/:id', {templateUrl:'views/edit.html', controller:"editCtrl"})
+    	.when('/profil', {templateUrl:'views/users/profil.html', controller:"ProfilCtrl"})
+    	.when('/tasks', {templateUrl:'views/tasks/tasks.html', controller:"TasksCtrl"})
+    	.when('/user/tasks', {templateUrl:'views/tasks/myTasks.html', controller:"TasksCtrl"})
+    	.when('/tasks/add', {templateUrl:'views/tasks/addTask.html', controller:"TasksCtrl"})
+    	.when('/project/:id', {templateUrl:'views/projects/project.html', controller:"ProjectsCtrl"})
+    	.when('/projects', {templateUrl:'views/projects/projects.html', controller:"ProjectsCtrl"})
+    	.when('/user/projects', {templateUrl:'views/projects/myProjects.html', controller:"ProjectsCtrl"})
+    	.when('/projects/add', {templateUrl:'views/projects/addProject.html', controller:"ProjectsCtrl"})
+        .when('/users', {templateUrl:'views/users/users.html', controller:"UsersCtrl"})
+        .when('/users/add', {templateUrl:'views/users/addUser.html', controller:"UsersCtrl"})
+    	.when('/edit/:id', {templateUrl:'views/edit.html', controller:"EditCtrl"})
     .otherwise({redirectTo: '/'});
 });
 

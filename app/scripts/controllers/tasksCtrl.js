@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("tasksCtrl", function(API, $scope, $routeParams, $http, Session, $session, $location) {
+app.controller("TasksCtrl", function(API, $scope, $routeParams, $http, Session, $session, $location) {
 
 	$scope.display = false;
     $scope.open = false;

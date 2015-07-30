@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("usersCtrl", function(API, $scope, $http, Session, $session, $location, $routeParams) {
+app.controller("UsersCtrl", function(API, $scope, $http, Session, $session, $location, $routeParams) {
 
     $scope.display = false;
 

@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("headerCtrl", function(API, $scope, $http, $location, $session, Session) {
+app.controller("HeaderCtrl", function(API, $scope, $http, $location, $session, Session) {
 
 	$scope.undisplay = true;
 

@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("ProfilCtrl", function(API, $scope, $http, $location, $session, Session) {
+app.controller("profilCtrl", function(API, $scope, $http, $location, $session, Session) {
 
 	$scope.id = $session.get("id") ? $session.get("id") : null;
 	$scope.display = false;
