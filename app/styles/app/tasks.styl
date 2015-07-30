@@ -1,0 +1,61 @@
+.tasks
+    width 100%
+    max-width 650px
+    overflow hidden
+    margin 30px auto
+    padding 10px 20px
+    transition all 200ms ease-out
+    transform scale(1)
+    position relative
+    z-index 2
+
+    .tasks-container
+        padding 10px
+        border 1px solid uiverylightgrey
+
+    .task-actions
+        padding 4px 6px
+        font-size 12px
+        vertical-align middle
+        border none
+
+        i
+            font-size 15px
+            vertical-align top
+
+    .task-complete
+        position absolute
+        right 0
+        top 0
+        color uigreen
+
+    .task-importance
+        font-size 14px
+        color uigrey
+
+    .task-finished
+        text-decoration line-through
+
+    .task-finished-container
+        -webkit-filter grayscale(100%)
+        -moz-filter grayscale(100%)
+        -ms-filter grayscale(100%)
+        -o-filter grayscale(100%)
+        filter grayscale(100%)
+        filter gray
+
+    &:hover
+        transform scale(1.1)
+        z-index 5
+
+    h4
+        font-family "Roboto"
+        font-size 24px
+        color uiblue
+
+    p
+        color uigrey
+
+    input[type="checkbox"]
+        display none
+        opacity 0

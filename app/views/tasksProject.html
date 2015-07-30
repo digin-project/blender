@@ -1,0 +1,14 @@
+<div ng-if="display" >
+  <div class="col-md-3" ng-repeat="task in tasksByProject">
+        <a href="#/task/{{task.id}}"><div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">{{task.name}}</h3>
+              <div class="year">{{task.importance}}</div>
+            </div>
+            <div class="box-body">
+              <p>{{task.content}}</p>
+              {{task.deadline}}
+            </div>
+          </div> </a>
+    </div>
+</div>

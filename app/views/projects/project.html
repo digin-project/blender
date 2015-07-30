@@ -1,0 +1,19 @@
+</br></br></br>
+<h1>{{project.name}}</h1>Deadline : {{project.deadline}}
+</br></br>
+<h2>Les tâches associés à ce projet</h2>
+</br></br>
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Contenu</th>
+    <th>Durée</th>
+    <th>Validation</th>
+  </tr>
+  <tr ng-repeat="task in tasks">
+    <td>{{task.name}}</td>
+    <td>{{task.content}}</td>
+    <td>{{task.days}}</td>
+    <td>{{task.finish}}</td>
+  </tr>
+</table>

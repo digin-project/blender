@@ -1,0 +1,32 @@
+<div id="task-{{ task.id }}">
+    <div class="tasks-container col-lg-9" ng-class="{'task-finished-container' : task.finish}">
+        <h4><a ng-href="">{{ task.name }}</a></h4>
+        <p>{{ task.content }}</p>
+
+        <a class="align-right" ng-href="#/edit/{{task.id}}">
+            <button class="btn task-actions">
+                <i class="material-icons">mode_edit</i>
+                <span>Modifier</span>
+            </button>
+        </a>
+        <a class="align-right" ng-href="#/tasks" ng-click="delete(task.id)">
+            <button class="btn task-actions">
+                <i class="material-icons">delete</i>
+                <span>Supprimer</span>
+            </button>
+        </a>
+        <span>
+            <label for="task-finish-{{ task.id }}" class="btn task-actions">
+                <i class="material-icons" ng-if="!task.finish">check_box_outline_blank</i>
+                <i class="material-icons" ng-if="task.finish">check_box</i>
+                <span>Valider</span>
+            </label>
+            <input type="checkbox" id="task-finish-{{ task.id }}" aria-label="Checked" ng-model="task.finish" checked="task.finish" ng-change="isFinished(task, $index)">
+        </span>
+    </div>
+    <div class="col-lg-3">
+        <p class="task-days" ng-class="{'task-finished' : task.finish}"><small>Estimée à {{ task.days }} jours</small></p>
+        <i class="material-icons task-importance" ng-repeat="i in range(task.importance) track by $index">star</i>
+        <span class="task-complete" ng-if="task.finish"><i class="material-icons">check_circle</i></span>
+    </div>
+</div>

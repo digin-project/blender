@@ -1,0 +1,43 @@
+<h1>Créer une tâche</h1>
+
+        <form ng-submit="submit()" class="col-lg-6">
+            <div class="form-group">
+                <label>Nom</label>
+                <input ng-model="task.name" type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label>Contenu</label>
+                <textarea ng-model="task.content" type="text" class="form-control" placeholder="Contenu"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Date limite</label>
+                <input ng-model="task.deadline" type="date" class="form-control" placeholder="Date limite">
+            </div>
+            <div class="form-group">
+                <label>Importance</label>
+                <select ng-model="task.importance" convert-to-number class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mail user</label>
+                <select ng-model="task.id_user" convert-to-number class="form-control">
+                    <option value="{{user.id}}" ng-repeat="user in users">{{user.name}} - {{user.firstname}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Associer un projet</label>
+                <select ng-model="task.id_project" convert-to-number class="form-control">
+                    <option value="{{project.id}}" ng-repeat="project in projects track by $index">{{project.name}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Dépendances</label>
+                <select ng-model="task.id_task_mere" convert-to-number class="form-control">
+                    <option value="{{task_mere.id}}" ng-repeat="task_mere in tasks track by $index">{{task_mere.name}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-default btn-fill btn-info">Créer</button>
+        </form>

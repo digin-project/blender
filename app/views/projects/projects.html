@@ -1,0 +1,14 @@
+<div class="col-md-12"><h1>Voici tous les projets existants</h1></div>
+<div ng-if="display" >
+  <div class="col-md-3" ng-repeat="project in projects track by $index">
+        <a href="#/project/{{project.id}}"><div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">{{project.name}}</h3>
+              <div class="year"></div>
+            </div>
+            <div class="box-body">
+              <p>{{project.deadline}}</p>
+            </div>
+          </div> </a>
+    </div>
+</div>

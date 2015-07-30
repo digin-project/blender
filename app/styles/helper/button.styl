@@ -1,0 +1,32 @@
+uiblue = #016fcd
+uidarkblue = #0B61AB
+uiwhite = #fff
+
+.btn, .btn-defaut, .btn-fill, .btn-info
+    border 1px solid uiblue
+    text-transform uppercase
+    border-radius 3px
+    color uiblue
+    outline none
+    transition all 200ms ease-out
+    background uiwhite
+
+    &.btn-large
+        width 100%
+
+    &:hover, &:focus, &:active
+        background uiblue
+        color uiwhite
+
+    &.btn-full
+        color uiwhite
+        background-color uiblue
+        border none
+        transition all 200ms ease-out
+        outline none
+
+        &:hover, &:focus, &:active
+            background-color uidarkblue
+
+    &.btn-danger
+        background-color uired

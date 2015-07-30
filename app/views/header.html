@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" ng-href="#/user/tasks">DiginManager</a>
+    </div>
+
+    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+          <li ng-if="undisplay"><a href="#/connect">Connexion</a></li>
+
+          <li ng-if="display"><a href="#/users">Utilisateurs</a></li>
+          <li ng-if="display" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tâches<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#/tasks">Tâches</a></li>
+                <li><a href="#/user/tasks">Mes tâches</a></li>
+              </ul>
+          </li>
+          <li ng-if="display" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projets<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#/projects">Projets</a></li>
+                <li><a href="#/user/projects">Mes projets</a></li>
+              </ul>
+          </li>
+          <li ng-if="display"><a href="#/profil">Profil</a></li>
+          <li ng-if="display" ng-click="logout()"><a href="#/connect">Deconnexion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

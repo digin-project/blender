@@ -1,0 +1,17 @@
+</br></br><table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Mail</th>
+        <th>Nb de tâches</th>
+    </tr>
+
+    <tr ng-repeat="user in users track by $index">
+        <th>{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.firstname}}</td>
+        <td>{{user.mail}}</td>
+        <td>{{user.nbTasks}}</td>
+    </tr>
+</table>

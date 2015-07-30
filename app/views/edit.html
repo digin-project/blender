@@ -1,0 +1,30 @@
+<h1>Modifier la tâche : {{task.name}} - {{task.id}}</h1>
+        <form ng-submit="editTask()">
+            <div class="form-group">
+                <label>Nom</label>
+                <input ng-model="task.name" type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label>Contenu</label>
+                <input ng-model="task.content" type="text" class="form-control" placeholder="Contenu">
+            </div>
+            <div class="form-group">
+                <label>Date limite</label> - {{task.deadline}}
+                <input ng-model="task.deadline" type="date" class="form-control" placeholder="Date limite">
+            </div>
+            <div class="form-group">
+                <label>Importance</label>
+                <select ng-model="task.importance" convert-to-number class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mail user</label>
+                <select ng-model="task.id_user" convert-to-number class="form-control">
+                    <option value="{{user.id}}" ng-repeat="user in users">{{user.name}} - {{user.firstname}}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
