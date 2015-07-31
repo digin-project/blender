@@ -28,21 +28,8 @@ app.constant("API", {
     "HOST" : "http://localhost:8888/api"
 });
 
-app.run(function() {
-    // do something padawan
+app.run(function($rootScope, $route) {
+    $rootScope.isRoute = function(route){
+		return route == $route.current.$$route.originalPath;
+	};
 });
-
-
-// ----------------------------- PAGE ACCUEIL ----------------------------- //
-
-
-
-
-
-// ----------------------------- PAGE SUBMIT ----------------------------- //
-
-// ----------------------------- PAGE LOGIN ----------------------------- //
-
-// ----------------------------- HEADER ----------------------------- //
-
-// ----------------------------- PAGE PROFIL ----------------------------- //

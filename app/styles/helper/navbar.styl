@@ -6,18 +6,29 @@
     position relative
 
     ul
-        li.dropdown
-            &.open
-                > a
-                    background-color transparent
-                    border-bottom 2px solid uiblue
-                    color uiblue
+        li
+            a
+                text-transform uppercase
 
-                    &:hover, &:active, &:focus
+            &.dropdown
+
+                &.open
+                    > a
                         background-color transparent
+                        border-bottom 3px solid uiblue
                         color uiblue
 
-            ul.dropdown-menu
-                box-shadow none
-                border 1px solid uilightgrey
-                padding 10px
+                        &:hover, &:active, &:focus
+                            background-color transparent
+                            color uiblue
+
+                ul.dropdown-menu
+                    box-shadow none
+                    border 1px solid uilightgrey
+                    padding 10px
+
+    .active
+        a
+            background-color transparent !important
+            border-bottom 3px solid uiblue !important
+            color uiblue !important

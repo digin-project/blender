@@ -13,22 +13,22 @@
       <ul class="nav navbar-nav navbar-right">
           <li ng-if="undisplay"><a href="#/connect">Connexion</a></li>
 
-          <li ng-if="display"><a href="#/users">Utilisateurs</a></li>
-          <li ng-if="display" class="dropdown">
+          <li ng-if="display" ng-class="{'active' : $root.isRoute('/users') }"><a href="#/users">Utilisateurs</a></li>
+          <li ng-if="display" class="dropdown" ng-class="{'active' : $root.isRoute('/tasks') || $root.isRoute('/user/tasks') }">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tâches<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#/tasks">Tâches</a></li>
                 <li><a href="#/user/tasks">Mes tâches</a></li>
               </ul>
           </li>
-          <li ng-if="display" class="dropdown">
+          <li ng-if="display" class="dropdown" ng-class="{'active' : $root.isRoute('/projects') || $root.isRoute('/user/projects') }">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projets<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#/projects">Projets</a></li>
                 <li><a href="#/user/projects">Mes projets</a></li>
               </ul>
           </li>
-          <li ng-if="display"><a href="#/profil">Profil</a></li>
+          <li ng-if="display" ng-class="{'active' : $root.isRoute('/profil') }"><a href="#/profil">Profil</a></li>
           <li ng-if="display" ng-click="logout()"><a href="#/connect">Deconnexion</a></li>
       </ul>
     </div>
