@@ -1,6 +1,23 @@
 .navbar-default
-    background-color transparent
+    background-color #fff
     border none
     border-bottom 1px solid uilightgrey
-    padding 10px
+    padding 0 10px
     position relative
+
+    ul
+        li.dropdown
+            &.open
+                > a
+                    background-color transparent
+                    border-bottom 2px solid uiblue
+                    color uiblue
+
+                    &:hover, &:active, &:focus
+                        background-color transparent
+                        color uiblue
+
+            ul.dropdown-menu
+                box-shadow none
+                border 1px solid uilightgrey
+                padding 10px

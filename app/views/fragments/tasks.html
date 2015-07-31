@@ -1,6 +1,6 @@
 <div id="task-{{ task.id }}" class="tasks-padding" ng-mouseover="show = true" ng-mouseleave="show = false" ng-init="show = false">
     <div class="tasks-container col-lg-9" ng-class="{'task-finished-container' : task.finish}">
-        <h4><a ng-href="">{{ task.name }}</a></h4>
+        <h4>{{ task.name }}</h4>
         <p ng-show="show">{{ task.content }}</p>
 
         <span ng-show="show">
